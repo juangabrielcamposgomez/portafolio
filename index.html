@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Juan Campos Gomez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <img src="static/foto.jpeg" alt="Tu imagen">
+    </div>
+
+    <div class="container1">
+        <h1>Mi Portafolio</h1>
+        <p>Juan Campos Gomez.<br>
+            Programador y Analista de Sistema.</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#lenguajes">Lenguajes</a></li>
+            <li><a href="#frameworks">Frameworks</a></li>
+            <li><a href="#contacto">Contactame</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <section id="perfil">
+        <h2>Perfil</h2>
+        <p>
+            Apasionado por la tecnología y el desarrollo de software, con una sólida formación en bases de datos SQL,
+            diagramas UML y notación BPMN.  Mi experiencia se centra en la creación de aplicaciones web, móviles y videojuegos,
+            aplicando metodologías ágiles como Scrum en todo el ciclo de vida del desarrollo aplicamos OSWAP 10 en el ciclo de vida del software
+            junto a sus matrices de calor .<br><br>
+
+            Habilidades:<br>
+
+            Lenguajes de programación: PHP, Kotlin, C#<br>
+            Bases de datos: SQL, MySQL<br>
+            Herramientas: Android Studio, Unity<br>
+            Metodologías: Scrum<br>
+            Patrones de diseño: MVC, MVVM<br>
+            Arquitectura de software: Clean Architecture<br>
+            Modelado: UML, BPMN<br><br>
+
+            Proyectos:<br>
+
+            Taller mecánico (Web): Simulación de un taller mecánico utilizando PHP y MySQL.  Implementamos el patrón de diseño MVC (Modelo-Vista-Controlador) para organizar el código, separando la lógica de la aplicación en tres componentes interconectados.
+            Esto nos permitió mejorar la mantenibilidad del código y facilitar el trabajo en equipo, ya que cada miembro podía enfocarse en un componente específico.<br><br>
+
+            Modelo: Gestionaba la información de clientes, vehículos, reparaciones y stock de repuestos, interactuando con la base de datos MySQL.<br>
+
+            Vista: Se encargaba de la presentación de la información al usuario, utilizando HTML y CSS para crear una interfaz intuitiva.<br>
+
+            Controlador: Gestionaba las peticiones del usuario (registro de clientes, creación de órdenes de trabajo, etc.) y la lógica de la aplicación (cálculo de costos, generación de informes).<br><br>
+
+            Sistema de pedidos para minimarket (Móvil): Aplicación Android desarrollada en Kotlin con Android Studio que simula un sistema de pedidos para un minimarket.<br>
+            Utilizamos el patrón de diseño MVVM (Modelo-Vista-ViewModel) para crear una aplicación robusta y fácil de mantener.<br><br>
+
+            Modelo: Representaba los datos de productos, clientes y pedidos.<br>
+            Vista: Mostraba la interfaz de usuario para que los clientes pudieran navegar por los productos, agregarlos al carrito y realizar pedidos.<br>
+            ViewModel: Actuaba como intermediario entre la vista y el modelo, proporcionando los datos necesarios para la vista y gestionando la lógica de la aplicación (validación de datos, procesamiento de pedidos).<br><br>
+
+            Videojuego educativo
+            (Unity):  Proyecto de videojuego para mejorar la comprensión lectora de niños de educación básica.  Se aplicó el método del silabario hispanoamericano y se utilizó el motor gráfico Unity con C#.
+            En este proyecto,  consideramos principios de Clean Architecture para asegurar la escalabilidad y la testabilidad del código.<br><br>
+
+            Entidades: Representan los conceptos básicos del juego, como el jugador, los enemigos y los objetos del escenario.<br>
+            Casos de uso: Implementan la lógica del juego, como el movimiento del jugador, la interacción con objetos y la resolución de puzzles.<br>
+            Adaptadores: Se encargan de la interacción con frameworks externos, como la interfaz gráfica de usuario y el motor de física.<br><br>
+
+            • Para el proyecto de especialización realizamos un proyecto de un video juego para mejorar la comprensión lectora de los niños de educación básica aplicando.
+            el método del silabario hispanoamericano donde creamos la documentación y estamos en la fase de diseño donde mi compañero Felipe aliaga creo los recursos en pixel art,
+            yo programe y desarrolle el prototipo en motor grafico UNITY y el lenguaje de programación C# .<br><br>
+
+
+
+
+
+        </p>
+        <div id="contenidoNoticia"></div>
+    </section>
+
+    <section id="lenguajes">
+        <h2>Lenguajes de Programación</h2>
+        <ul>
+            <li><iframe src="../lenguajes/kotlin.html" class="mi-iframe"></iframe></li>
+        </ul>
+        <ul>
+            <li><iframe src="../lenguajes/python.html.html" class="mi-iframe"></iframe></li>
+        </ul>
+        <ul>
+            <li><iframe src="../lenguajes/unity.html.html" class="mi-iframe"></iframe></li>
+        </ul>
+    </section>
+
+    <section id="frameworks">
+        <h2>Frameworks</h2>
+        <p>Esta página está siendo creada con Ktor un framework para desarrollo multiplataforma el cual está diseñado
+            para KOTLIN. El cual me encuentro aprendiendo.
+        </p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes alguna pregunta o comentario? <a href="mailto:juan.camposgomez@gmail.com">Envíame un correo electrónico</a>.</p>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Juan Campos Gomez. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="static/script.js"></script>
+<script>
+    fetch('lenguajes/kotlin.txt')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('kotlin-content').innerHTML = data;
+        });
+</script>
+<script>
+    fetch('lenguajes/python.txt')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('kotlin-content').innerHTML = data;
+        });
+</script>
+<script>
+    fetch('lenguajes/unity.txt')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('kotlin-content').innerHTML = data;
+        });
+</script>
+</body>
+</html>
